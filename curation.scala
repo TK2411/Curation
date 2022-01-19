@@ -7,7 +7,7 @@ Try {
   import com.modak.common.credential.Credential
   import com.modak.common._
   import com.github.music.of.the.ainur.almaren.builder.Core.Implicit
-
+  
   val almaren = Almaren("curation-example")
 
   val args = sc.getConf.get("spark.driver.args").split("\\s+")
@@ -41,3 +41,5 @@ Try {
     sys.exit(1)
   }
 }
+
+
