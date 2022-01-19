@@ -28,9 +28,7 @@ Try {
   }
   val postCredentials = getCredentiasl(endpoint, token,cred_id, cred_type)
 
-
   almaren.builder.sourceJdbc("jdbc:postgresql://w3.training5.modak.com/training_2021","org.postgresql.Driver","select * from mt3035.marketdata",Some(postCredentials.username),Some(postCredentials.password)).sql("select MarketCenter,Arrivals,MinimumPrices,MaximumPrices,ModalPrices from __TABLE__ ").targetJdbc("jdbc:postgresql://w3.training5.modak.com/training_2021","org.postgresql.Driver","mt3035.Transformeddata",SaveMode.Overwrite,Some(postCredentials.username),Some(postCredentials.password)).batch
-
 
 }match {
   case Success(s) => {
